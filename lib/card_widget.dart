@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
-  CardWidget({super.key, required this.index, required this.data});
+  CardWidget({Key? key, required this.index, required this.data})
+      : super(key: key);
 
-  List colors_data = [
+  List<Map<String, Color>> colorsData = [
     {"color": Colors.blueAccent},
     {"color": Colors.deepPurple},
     {"color": Colors.grey},
@@ -12,7 +13,7 @@ class CardWidget extends StatelessWidget {
     {"color": const Color.fromARGB(255, 54, 69, 76)},
   ];
 
-  List icons_img = [
+  List<Map<String, IconData>> iconsImg = [
     {"img": Icons.abc},
     {"img": Icons.abc_rounded},
     {"img": Icons.abc_sharp},
@@ -28,46 +29,34 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      // child: GridView.builder(
-      //   itemCount: 6,
-      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      //     crossAxisCount: 2,
-      //   ),
-      //   itemBuilder: (context, index) {
-      //     return Padding(
-      //       padding: const EdgeInsets.all(8.0),
-      child: Card(
-        color: colors_data[index]["color"],
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
-        elevation: 8,
-        margin: EdgeInsets.all(8),
-        
-        child: Stack(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Icon(Icons.keyboard_double_arrow_right)],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Icon(icons_img[data]["img"]),
-                SizedBox(
-                  height: 10,
-                ),
-                Text('ABC'),
-              ],
-            ),
-          ],
+      child: AspectRatio(
+        aspectRatio: 1.0, // Set the aspect ratio to 1.0 for a square shape
+        child: Card(
+          color: colorsData[index]["color"],
+          elevation: 8,
+          margin: EdgeInsets.all(8),
+          child: Stack(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Icon(Icons.keyboard_double_arrow_right)],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Icon(iconsImg[data]["img"]),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text('ABC'),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
-  //),
-  //);
 }
-//}
