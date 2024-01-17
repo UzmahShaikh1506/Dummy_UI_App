@@ -9,8 +9,8 @@ class alignedLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlignedGridView.count(
         scrollDirection: Axis.vertical,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 6,
+        //crossAxisSpacing: 6,
+        //mainAxisSpacing: 6,
         crossAxisCount: 2,
         itemCount: 6,
         itemBuilder: (context, index) {

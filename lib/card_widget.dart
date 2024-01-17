@@ -13,12 +13,12 @@ class CardWidget extends StatelessWidget {
   ];
 
   List icons_img = [
-    {"icon": Icons.abc},
-    {"icon": Icons.abc_rounded},
-    {"icon": Icons.abc_sharp},
-    {"icon": Icons.account_balance_wallet},
-    {"icon": Icons.arrow_back_ios},
-    {"icon": Icons.app_blocking_sharp},
+    {"img": Icons.abc},
+    {"img": Icons.abc_rounded},
+    {"img": Icons.abc_sharp},
+    {"img": Icons.account_balance_wallet},
+    {"img": Icons.arrow_back_ios},
+    {"img": Icons.app_blocking_sharp},
   ];
 
   final int index;
@@ -43,6 +43,7 @@ class CardWidget extends StatelessWidget {
         ),
         elevation: 8,
         margin: EdgeInsets.all(8),
+        
         child: Stack(
           children: [
             Row(
@@ -54,7 +55,7 @@ class CardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Icon(icons_img[data]["data"]),
+                Icon(icons_img[data]["img"]),
                 SizedBox(
                   height: 10,
                 ),

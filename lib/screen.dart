@@ -21,7 +21,6 @@ class MyScreen extends StatelessWidget {
         color: Colors.black,
         //height: 200,
 // column,flexbox,expanded,stack,SCSV - controversial
-
         //   child: Padding(
         //     padding: const EdgeInsets.all(10.0),
         //     child: Column(
@@ -90,7 +89,7 @@ class MyScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Expanded(
               child: Padding(
@@ -102,6 +101,5 @@ class MyScreen extends StatelessWidget {
         ),
       ),
     );
-    //}
   }
 }
