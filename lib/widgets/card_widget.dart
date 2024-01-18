@@ -18,12 +18,12 @@ class CardWidget extends StatelessWidget {
   ];
 
   List<Map<String, IconData>> iconsImg = [
-    {"img": Icons.lock},
-    {"img": Icons.circle},
+    {"img": Icons.lock_outlined},
+    {"img": Icons.notification_important_outlined},
     {"img": Icons.auto_graph},
-    {"img": Icons.help_center},
-    {"img": Icons.person_2},
-    {"img": Icons.info_rounded},
+    {"img": Icons.help_center_outlined},
+    {"img": Icons.person_outline_outlined},
+    {"img": Icons.info_outline},
   ];
 
   List texts = [

@@ -63,21 +63,24 @@ class MyScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  color: Colors.white,
-                ),
-                Icon(
-                  Icons.notification_add,
-                  color: Colors.white,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    color: Colors.white,
+                  ),
+                  Icon(
+                    Icons.notification_add,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Center(
               child: Text(
@@ -93,18 +96,14 @@ class MyScreen extends StatelessWidget {
               height: 10,
             ),
             Expanded(child: alignedLayout()),
-            // SizedBox(
-            //   height: 1,
-            // ),
-            Column(
-              children: [
-                ButtonWidget(icon: Icons.telegram, text: 'Join Us On Telegram'),
-                SizedBox(
-                  height: 10,
-                ),
-                ButtonWidget(icon: Icons.discord, text: 'Join Us On Discord'),
-              ],
-            )
+            ButtonWidget(
+              icon: Icons.telegram,
+              text: 'Join Us On Telegram',
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ButtonWidget(icon: Icons.discord, text: 'Join Us On Discord')
           ],
         ),
       ),
