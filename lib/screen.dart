@@ -1,4 +1,5 @@
 import 'package:dummy_app/aligned_layout.dart';
+import 'package:dummy_app/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -91,12 +92,19 @@ class MyScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: alignedLayout(),
-              ),
-            ),
+            Expanded(child: alignedLayout()),
+            // SizedBox(
+            //   height: 1,
+            // ),
+            Column(
+              children: [
+                ButtonWidget(icon: Icons.telegram, text: 'Join Us On Telegram'),
+                SizedBox(
+                  height: 10,
+                ),
+                ButtonWidget(icon: Icons.discord, text: 'Join Us On Discord'),
+              ],
+            )
           ],
         ),
       ),

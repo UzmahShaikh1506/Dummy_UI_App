@@ -1,4 +1,4 @@
-import 'package:dummy_app/card_widget.dart';
+import 'package:dummy_app/widgets/card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -17,6 +17,7 @@ class alignedLayout extends StatelessWidget {
           return CardWidget(
             index: index,
             data: index,
+            txtData: index,
           );
           //ClipRRect(
           //borderRadius: BorderRadius.circular(10),
